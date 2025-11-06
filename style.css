@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh; /* indica que la altura minima de la pastaña es el 100% */
+    background-color: #262a3b;
+    display: grid; /* indicamos que vamos a trabajar con grid (nos permite ordenar los elementos dentro de la pagina web) */
+    place-items: center; /* centramos los elementos dentro de la pagina web */
+
+}
+
+.calculadora {
+   background-color: cadetblue;
+   color: white;
+   width: 350px;
+   max-width: 100%;
+   padding: 1.5rem;
+   border-radius: 1rem;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: .5rem;
+   box-shadow: 0 0 20px cadetblue;
+}
+
+.pantalla {
+    grid-column: 1 / 5;
+    background-color: #1a1c25;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgb(72, 111, 112);
+    color: rgb(255, 255, 255);
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: .5rem;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #142b38;
+    font-weight: bold;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+   grid-row: span 2;
+    display: grid;
+    place-items: center;
+    background-color: rgb(201, 76, 76);
+}
+
+#igual:hover {
+    background-color: rgb(150, 50, 50);
+    font-weight: bold;
+}
